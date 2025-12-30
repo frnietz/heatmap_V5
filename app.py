@@ -177,16 +177,16 @@ if generate and ticker:
         st.text_area("Key Risks")
 
     with tabs[5]:
-    st.markdown("<div class='card'>", unsafe_allow_html=True)
+        st.markdown("<div class='card'>", unsafe_allow_html=True)
 
-    decision = st.selectbox("Final Decision", ["Accumulate", "Watch", "Avoid"])
-    confidence = st.slider("Confidence Level", 1, 5, 3)
-    thesis = st.text_area(
-        "Final Thesis Summary",
-        placeholder="Clear, structured, unemotional reasoning..."
-    )
-
-    st.button("Save Thesis")
-
-    st.markdown("</div>", unsafe_allow_html=True)
+        decision = st.selectbox("Final Decision", ["Accumulate", "Watch", "Avoid"])
+        confidence = st.slider("Confidence Level", 1, 5, 3)
+        thesis = st.text_area(
+            "Final Thesis Summary",
+            placeholder="Clear, structured, unemotional reasoning..."
+        )
+    
+        st.button("Save Thesis")
+    
+        st.markdown("</div>", unsafe_allow_html=True)
 
