@@ -233,7 +233,13 @@ if data:
 
     # Render Heatmap
     fig = create_heatmap(df)
-    st.plotly_chart(fig, use_container_width=True)
+    
+    # FIX: Updated usage for newer Streamlit versions
+    try:
+        st.plotly_chart(fig, use_container_width=True)
+    except Exception:
+        # Fallback for strict versions requiring the 'width' parameter
+        st.plotly_chart(fig, width="stretch")
 
     # Data Table (Below Heatmap)
     with st.expander("View Raw Data"):
